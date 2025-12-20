@@ -1,6 +1,6 @@
 const API_BASE = "https://gp-backend-mis1.onrender.com";
 
-const res = await fetch(`${API_BASE}/api/xxx`, {
+const res = await fetch(`${API_BASE}/api/me`, {
     method: "GET",
     credentials: "include",
 })
