@@ -35,7 +35,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     //抓取資料
-    const res = await fetch(`${window.API_BASE}/api/me`);
+    const res = await fetch(`${API_BASE}/api/xxx`, {
+        method: "GET",
+        credentials: "include",
+    })
     const data = await res.json();
     if(!res.logged_in) window.location.href = "/";
     name.value = data.username;

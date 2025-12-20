@@ -1,6 +1,9 @@
 const API_BASE = "https://gp-backend-mis1.onrender.com";
 
-const res = await fetch("`${window.API_BASE}/api/me`");
+const res = await fetch(`${API_BASE}/api/xxx`, {
+    method: "GET",
+    credentials: "include",
+})
 const data = await res.json();
 if(!res.logged_in) window.location.href = "/";
 
