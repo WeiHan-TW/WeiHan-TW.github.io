@@ -1,0 +1,19 @@
+.form {
+  margin-top: 10px;        /* 標題跟表單中間留一點空間 */
+}
+
+/* 一列一行：label + input */
+.form-row {
+  margin-bottom: 10px;     /* 每一行之間的距離 */
+}
+
+/* 讓三個 label 有固定寬度，input 就會對齊成直線 */
+.form-row label {
+  display: inline-block;   /* 讓 label 可以設定寬度 */
+  width: 250px;            /* 自己調到你覺得漂亮的寬度 */
+}
+
+/* 讓 input 看起來舒服一點（可選）*/
+.form-row input {
+  padding: 4px 6px;
+}

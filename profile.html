@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="./static/profile/style.css"> 
+    <script src="./static/config.js"></script>
+    <script src="./static/profile/main.js" type="module"></script>
+</head>
+<body>
+    <div class="form">
+
+        <div class="form-row">
+            <p>基本資料</p>
+        </div>
+
+        <div class="form-row">
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password" required size="10"/>
+        </div>
+
+        <div class="form-row">
+            <button id="change">變更資料</button>
+        </div>
+
+        <div class="form-row">
+            <label for="name">name:</label>
+            <!--   類型        id        name        必填     大小     -->
+            <input type="text" id="name" name="name" required size="10" readonly/>
+        </div>
+
+        <div id="change-area" style="display: none;">
+
+            <div class="form-row">
+                <label for="new_password">new password:</label>
+                <input type="password" id="new_password" name="new_password" required size="10"/>
+            </div>
+
+            <div class="form-row">
+                <label for="new_confirm">confirm new password:</label>
+                <input type="password" id="new_confirm" name="new_confirm" required size="10"/>
+            </div>
+
+            <div class="form-row">
+                <button id="confirm">確認變更</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

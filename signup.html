@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊</title>
+    <link rel="stylesheet" href="./static/signup/style.css"> 
+    <script src="./static/config.js"></script>
+    <script src="./static/signup/main.js" type="module"></script>
+</head>
+<body>
+    <h1>註冊</h1>
+
+    <div class="form">
+
+        <div class="form-row">
+            <label for="name">name:</label>
+            <!--   類型        id        name        必填     大小     -->
+            <input type="text" id="name" name="name" required size="10" />
+        </div>
+
+        <div class="form-row">
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password" required size="10" />
+        </div>
+
+        <div class="form-row">
+            <label for="confirm">confirm your password:</label>
+            <input type="password" id="confirm" name="confirm" required size="10" />
+        </div>
+        
+        <div class="form-row">
+            <button id="signup">註冊</button>
+        </div>
+
+    </div>
+</body>
