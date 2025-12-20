@@ -1,5 +1,9 @@
 const API_BASE = "https://gp-backend-mis1.onrender.com";
 
+const res = await fetch("/api/me");
+const data = await res.json();
+if(!res.logged_in) window.location.href = "/";
+
 async function logout() {
     const r = await fetch(`${API_BASE}/api/logout`, {
         method: "POST",

@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     //抓取資料
     const res = await fetch("/api/me");
     const data = await res.json();
+    if(!res.logged_in) window.location.href = "/";
     name.value = data.username;
 
     change_btn.addEventListener("click",async () => {
