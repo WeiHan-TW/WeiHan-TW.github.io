@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     //抓取資料
-    const res = await fetch(`${API_BASE}/api/xxx`, {
+    const res = await fetch(`${API_BASE}/api/me`, {
         method: "GET",
         credentials: "include",
     })
