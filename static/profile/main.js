@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             alert("密碼不相同")
             return;
         }
-        res = change_password(name, password, new_password);
+        res = await change_password(name, password, new_password);
         if(!res.ok){
             alert(res.error);
         }else{
