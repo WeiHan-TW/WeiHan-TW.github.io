@@ -56,10 +56,30 @@ export function logout(redirectTo = "/") {
 //loading
 
 export function showLoading() {
-  const el = document.getElementById("loading");
-  if (el) el.style.display = "flex";
+    const el = document.getElementById("loading");
+    if (el) el.style.display = "flex";
 }
 export function hideLoading() {
-  const el = document.getElementById("loading");
-  if (el) el.style.display = "none";
+    const el = document.getElementById("loading");
+    if (el) el.style.display = "none";
+}
+
+//password檢查規範
+
+export function validateNoEmptyNoSpace(value) {
+    // 轉成字串，避免傳到 null/undefined/number 直接爆掉
+    const str = String(value ?? "");
+
+    // 1) 不能為空（只要全是空白也算空）
+    if (str.trim().length === 0) {
+        return { ok: false, message: "不能為空", value: str };
+    }
+
+    // 2) 不能有任何空白字元：包含半形空格、全形空格(U+3000)、tab、換行等
+    // \s 會抓到多數空白；另外再加上 \u3000 防全形空格
+    if (/[\s\u3000]/.test(str)) {
+        return { ok: false, message: "不能包含空格（半形/全形皆不行）", value: str };
+    }
+
+    return { ok: true, message: "OK", value: str };
 }

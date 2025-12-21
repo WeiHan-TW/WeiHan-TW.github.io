@@ -1,6 +1,7 @@
 import { requireLogin } from "../auth.js";
 import { login } from "../auth.js";
 import { showLoading, hideLoading } from "../auth.js";
+import { validateNoEmptyNoSpace } from "../auth.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
     //按鈕
@@ -68,13 +69,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
 
     confirm_btn.addEventListener("click",async () => {
-        let message = "";
-        if(name.value.includes(' ')){
-            name.value = data.username;
-            message += "帳戶名稱不得有空格\n";
+        const res = validateNoEmptyNoSpace(name.value);
+        if (!res.ok) {
+            alert("帳戶名稱"+r.message);
+            return;
         }
-        if(name.value=""){
-            
+        res = validateNoEmptyNoSpace(new_password.value);
+        if (!res.ok) {
+            alert("密碼"+res.message);
+            return;
         }
+        if(new_password.value != new_confirm){
+            alert("密碼不相同")
+            return;
+        }
+        console.log("okok");
     })
 });

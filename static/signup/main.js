@@ -1,3 +1,4 @@
+import { validateNoEmptyNoSpace } from "../auth.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById("name");
@@ -6,16 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const signup_btn = document.getElementById("signup");
 
     signup_btn.addEventListener("click",async () => {
-        let message = "";
-        if(name.value.includes(' ')){
-            name.value = data.username;
-            message += "帳戶名稱不得有空格\n";
+        const res = validateNoEmptyNoSpace(name.value);
+        if (!res.ok) {
+            alert("帳戶名稱"+r.message);
+            return;
         }
-        if(password.value.includes(' ')){
-            name.value = data.username;
-            message += "密碼不得有空格\n";
+        res = validateNoEmptyNoSpace(password.value);
+        if (!res.ok) {
+            alert("密碼"+r.message);
+            return;
         }
-        if(message != "") alert(message);
         else if(password.value != confirm.value){
             alert("密碼不相符");
             confirm.value = "";
