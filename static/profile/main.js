@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
 
     confirm_btn.addEventListener("click",async () => {
-        showLoading();
         let res = validateNoEmptyNoSpace(new_password.value);
         if (!res.ok) {
             alert("密碼"+res.message);
@@ -76,6 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             alert("密碼不相同")
             return;
         }
+        showLoading();
         res = await change_password(name.value, password.value, new_password.value);
         hideLoading();
         if(!res.ok){
