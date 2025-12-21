@@ -37,8 +37,12 @@ export async function requireLogin(redirectTo = "/") {
 
 export async function login(name, password) {
     console.log(window.API_BASE);
-    const body = JSON.stringify({ name, password });
-    const res = await fetch(`${window.API_BASE}/api/login`, { method: "POST",headers:{"Content-Type": "application/json"}, body });
+    const payload = {
+        name: name,
+        password: password,
+    };
+    console.log("payload =", payload); // 你先確認這裡印出來是字串
+    const res = await fetch(`${window.API_BASE}/api/login`, { method: "POST",headers:{"Content-Type": "application/json"}, body : JSON.stringify(payload),});
     const data = await res.json();
     if (!res.ok || !data.ok || !data.token) return { ok: false, data };
     setToken(data.token);
