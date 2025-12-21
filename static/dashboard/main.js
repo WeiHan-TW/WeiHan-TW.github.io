@@ -1,5 +1,5 @@
-import { logout } from "./auth.js";
-import { requireLogin } from "./auth.js";
+import { logout } from "../auth.js";
+import { requireLogin } from "../auth.js";
 
 const res = requireLogin();
 

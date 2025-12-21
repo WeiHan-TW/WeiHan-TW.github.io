@@ -1,4 +1,4 @@
-import { login } from "./auth.js";
+import { login } from "../auth.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById("name");

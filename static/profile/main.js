@@ -1,5 +1,5 @@
-import { requireLogin } from "./auth.js";
-import { login } from "./auth.js";
+import { requireLogin } from "../auth.js";
+import { login } from "../auth.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
     //按鈕
