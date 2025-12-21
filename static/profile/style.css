@@ -17,3 +17,5 @@
 .form-row input {
   padding: 4px 6px;
 }
+
+@keyframes spin { to { transform: rotate(360deg); } }

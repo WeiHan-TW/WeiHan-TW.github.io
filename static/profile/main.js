@@ -1,5 +1,6 @@
 import { requireLogin } from "../auth.js";
 import { login } from "../auth.js";
+import { showLoading, hideLoading } from "../auth.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
     //按鈕
@@ -38,8 +39,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     //抓取資料
+    showLoading();
     const data = await requireLogin();
     name.value = data.username;
+    hideLoading();
 
     change_btn.addEventListener("click",async () => {
         if(is_changing){

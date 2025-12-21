@@ -52,3 +52,14 @@ export function logout(redirectTo = "/") {
     clearToken();
     window.location.href = redirectTo;
 }
+
+//loading
+
+export function showLoading() {
+  const el = document.getElementById("loading");
+  if (el) el.style.display = "flex";
+}
+export function hideLoading() {
+  const el = document.getElementById("loading");
+  if (el) el.style.display = "none";
+}
