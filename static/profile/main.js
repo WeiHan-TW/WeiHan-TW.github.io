@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             alert(res.error);
         }else{
             alert("用戶資訊已變更完成");
+            window.location.href = "/profile";
         }
     })
 });
