@@ -35,8 +35,8 @@ export async function requireLogin(redirectTo = "/") {
     return data; // {logged_in, username}
 }
 
-export async function login(username, password) {
-    const body = new URLSearchParams({ username, password });
+export async function login(name, password) {
+    const body = new URLSearchParams({ name, password });
     const res = await fetch(`${window.API_BASE}/api/login`, { method: "POST", body });
     const data = await res.json();
     if (!res.ok || !data.ok || !data.token) return { ok: false, data };
