@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         else if(password.value == "") alert("請先輸入密碼")
         else{
             try{
-                const response = login(name.value, password.value);
+                const response = await login(name.value, password.value);
 
                 if (response.ok) {
                     is_changing = true;
