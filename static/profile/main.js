@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
 
     confirm_btn.addEventListener("click",async () => {
-        const res = validateNoEmptyNoSpace(name.value);
+        let res = validateNoEmptyNoSpace(name.value);
         if (!res.ok) {
             alert("帳戶名稱"+r.message);
             return;

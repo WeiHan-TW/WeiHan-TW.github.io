@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const signup_btn = document.getElementById("signup");
 
     signup_btn.addEventListener("click",async () => {
-        const res = validateNoEmptyNoSpace(name.value);
+        let res = validateNoEmptyNoSpace(name.value);
         if (!res.ok) {
             alert("帳戶名稱"+r.message);
             return;
