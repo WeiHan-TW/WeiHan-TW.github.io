@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     //抓取資料
     showLoading();
     const data = await requireLogin();
-    name.value = data.username;
+    username.value = data.username;
     hideLoading();
 
     change_btn.addEventListener("click",async () => {
