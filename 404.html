@@ -12,36 +12,32 @@
     <main class="wrap">
         <section class="card" role="region" aria-label="404 Not Found">
             <div class="left">
-            <div class="badge">
-                <span class="badge-dot" aria-hidden="true"></span>
-                <span>404 · 找不到頁面</span>
+                <div class="badge">
+                    <span class="badge-dot" aria-hidden="true"></span>
+                    <span>404 · 找不到頁面</span>
+                </div>
+        
+                <h1 class="title">你要找的頁面不存在</h1>
+                <p class="desc">
+                    可能是連結打錯、頁面被移動，或已經下架。
+                    你可以回到首頁，或回上一頁再試一次。
+                </p>
+        
+                <div class="actions">
+                    <!-- 改成你的首頁路徑 -->
+                    <a class="btn btn-primary" href="/">回到首頁</a>
+        
+                    <button class="btn" type="button" onclick="history.back()">回上一頁</button>
+        
+                    <!-- 可選：導回分數預測入口 -->
+                    <!-- <a class="btn" href="/predict">前往分數預測</a> -->
+                </div>
+        
+                <div class="hint">
+                    小提示：按 <span class="kbd">Alt</span> + <span class="kbd">←</span> 也能回上一頁
+                </div>
             </div>
-    
-            <h1 class="title">你要找的頁面不存在</h1>
-            <p class="desc">
-                可能是連結打錯、頁面被移動，或已經下架。
-                你可以回到首頁，或回上一頁再試一次。
-            </p>
-    
-            <div class="actions">
-                <!-- 改成你的首頁路徑 -->
-                <a class="btn btn-primary" href="/">回到首頁</a>
-    
-                <button class="btn" type="button" onclick="history.back()">回上一頁</button>
-    
-                <!-- 可選：導回分數預測入口 -->
-                <!-- <a class="btn" href="/predict">前往分數預測</a> -->
-            </div>
-    
-            <div class="hint">
-                小提示：按 <span class="kbd">Alt</span> + <span class="kbd">←</span> 也能回上一頁
-            </div>
-            </div>
-    
-            <div class="right" aria-hidden="true">
-            <div class="big404">404</div>
-    
-            <div class="magnifier"></div>
+
             </div>
         </section>
     </main>
