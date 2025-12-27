@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     is_changing = true;
                     change();
                 } else {
-                    alert(response.data.message)
+                    alert(response.data.error)
                 }
             } catch (err) {
                 console.error(err);

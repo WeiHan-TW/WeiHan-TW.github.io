@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // 3. 登入成功 → 導回首頁（或你想去的頁）
                 window.location.href = "./dashboard.html";
             } else {
-                alert(response.data.message)
+                alert(response.data.error)
             }
             hideLoading();
         } catch (err) {
