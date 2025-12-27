@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if(result.ok){
                     alert("已成功建立帳號");
                 }else{
-                    alert(result.message);
+                    alert(result.error);
                 }
             }
         }catch {err}{
