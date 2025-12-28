@@ -2,10 +2,9 @@ import { logout } from "../auth.js";
 import { requireLogin } from "../auth.js";
 import { showLoading, hideLoading } from "../auth.js";
 
-/*
 showLoading();
 await requireLogin();
-hideLoading();*/
+hideLoading();
 
 const university_input = document.getElementById("university_input");
 const university_list = document.getElementById("university_list");
