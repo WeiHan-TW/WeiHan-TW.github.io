@@ -73,6 +73,14 @@ export async function get_universities() {
     return { ok: true, data: data.data };
 }
 
+export async function get_subject(university) {
+    const res = await fetch(`${window.API_BASE}/api/${university}/subject`, { method: "GET" });
+    const data = await res.json();
+    if (!res.ok || !data.ok || !data.token) return { ok: false, data };
+    setToken(data.token);
+    return { ok: true, data };
+}
+
 //loading
 
 export function showLoading() {
