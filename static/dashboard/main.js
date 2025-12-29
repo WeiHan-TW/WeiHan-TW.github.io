@@ -12,8 +12,6 @@ const university_list = document.getElementById("university_list");
 const subject_input = document.getElementById("subject_input");
 const subject_list = document.getElementById("subject_list");
 
-list.data.map(x => x[0]);
-
 function setDatalist_university_list(values) {
     university_list.replaceChildren(
         ...values.map(v => {
@@ -49,8 +47,8 @@ university_input.addEventListener("blur", async() => {
         hideLoading();
         if(data.ok){
             subject_input.type = "text";
-            data.data.map(x => x.name);
-            setDatalist_subject_list(data.data);
+            const names = data.data.map(x => x.name);
+            setDatalist_subject_list(names);
         }else{
             alert(data.error);
         }
