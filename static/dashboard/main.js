@@ -1,5 +1,5 @@
 import { get_subject, logout } from "../auth.js";
-import { requireLogin, get_universities, get_universities } from "../auth.js";
+import { requireLogin, get_universities, get_subject } from "../auth.js";
 import { showLoading, hideLoading } from "../auth.js";
 
 showLoading();
