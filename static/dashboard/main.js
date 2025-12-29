@@ -37,6 +37,7 @@ function isValid(val){
 }
 
 university_input.addEventListener("blur", async() => {
+    subject_input.value = "";
     if (university_input.value && !isValid(university_input.value.trim())) {
         subject_input.type = "hidden";
         alert("請從清單選擇");
