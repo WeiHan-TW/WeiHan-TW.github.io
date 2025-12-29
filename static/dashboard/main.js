@@ -1,5 +1,5 @@
 import { logout } from "../auth.js";
-import { requireLogin, get_universities, get_subject } from "../auth.js";
+import { requireLogin, get_universities, get_subjects } from "../auth.js";
 import { showLoading, hideLoading } from "../auth.js";
 
 showLoading();
@@ -45,7 +45,7 @@ university_input.addEventListener("blur", () => {
         university_input.value = "";
     }else{
         showLoading();
-        const data = get_subject(university_input.value);
+        const data = get_subjects(university_input.value);
         hideLoading();
         if(data.ok){
             subject_input.type = "text";

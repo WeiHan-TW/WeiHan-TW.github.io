@@ -73,8 +73,8 @@ export async function get_universities() {
     return { ok: true, data: data.data };
 }
 
-export async function get_subject(university) {
-    const res = await fetch(`${window.API_BASE}/api/${university}/subject`, { method: "GET" });
+export async function get_subjects(university) {
+    const res = await api(`/api/${university}/subjects`, { method: "GET" });
     const data = await res.json();
     if (!data.ok) return { ok: false, error: data.error };
     return { ok: true, data: data.data };
