@@ -47,6 +47,9 @@ university_input.addEventListener("blur", async() => {
     }else{
         showLoading();
         const data = await get_subjects(university_input.value);
+        console.log("API count:", res.data.length);
+        console.log("unique names:", new Set(res.data.map(x => x.name)).size);
+        console.log("first 10:", res.data.slice(0, 10));
         hideLoading();
         if(data.ok){
             subject_input.type = "text";
