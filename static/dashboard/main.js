@@ -44,7 +44,7 @@ university_input.addEventListener("blur", async() => {
         subject_input.type = "hidden";
         alert("請從清單選擇");
         university_input.value = "";
-    }else{
+    }else if(university_input.value){
         showLoading();
         const data = await get_subjects(university_input.value.trim());
         hideLoading();
